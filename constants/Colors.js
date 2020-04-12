@@ -4,4 +4,5 @@ export default {
   magenta: '#CC338B',
   lightPurp: '#8460CB',
   purple: '#8585FF',
+  lightWhite: '#fff9fe',
 };

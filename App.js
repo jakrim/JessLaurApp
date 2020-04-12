@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 
+import HomeScreen from './screens/HomeScreen';
 import MemoriesScreen from './screens/MemoriesScreen';
 
 const fetchFonts = () => {
@@ -12,6 +15,17 @@ const fetchFonts = () => {
     porcelain: require('./assets/fonts/Porcelain.ttf'),
   });
 };
+
+const ApplicationNavigator = createStackNavigator();
+
+const AppStack = () => (
+  <NavigationContainer>
+    <ApplicationNavigator.Navigator screenOptions={{ headerShown: false }}>
+      <ApplicationNavigator.Screen name='Home' component={HomeScreen} />
+      <ApplicationNavigator.Screen name='Memories' component={MemoriesScreen} />
+    </ApplicationNavigator.Navigator>
+  </NavigationContainer>
+);
 
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
@@ -26,7 +40,7 @@ export default function App() {
     );
   }
 
-  return <MemoriesScreen />;
+  return <AppStack />;
 }
 
 // const styles = StyleSheet.create({
