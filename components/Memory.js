@@ -4,24 +4,25 @@ import { MEMORIES } from '../data/dummy-data';
 
 import MemoryItem from '../components/MemoryItem';
 import Card from './Card';
+import { generateRandomMemory } from './HelperFunctions';
 
 const Memory = (props) => {
   return (
     <Card style={styles.card}>
-      <FlatList
+      {/* <FlatList
         style={styles.card}
         keyExtractor={(memory) => memory.id}
         data={MEMORIES}
-        renderItem={(itemData) => (
-          <MemoryItem
-            id={itemData.item.id}
-            title={itemData.item.title}
-            location={itemData.item.location}
-            description={itemData.item.description}
-            image={itemData.item.image}
-          />
-        )}
+        renderItem={(itemData) => ( */}
+      <MemoryItem
+        id={props.id}
+        title={props.title}
+        location={props.location}
+        description={props.description}
+        image={props.image}
       />
+      )}
+      {/* /> */}
     </Card>
   );
   // <View>

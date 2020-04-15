@@ -6,6 +6,7 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 
 import HomeScreen from './screens/HomeScreen';
+import VirtualCard from './screens/VirtualCard';
 import MemoriesScreen from './screens/MemoriesScreen';
 
 const fetchFonts = () => {
@@ -13,6 +14,7 @@ const fetchFonts = () => {
     balqis: require('./assets/fonts/Balqis.ttf'),
     'dm-sans-boldItalic': require('./assets/fonts/DMSans-BoldItalic.ttf'),
     porcelain: require('./assets/fonts/Porcelain.ttf'),
+    Reckless: require('./assets/fonts/Reckless.otf'),
   });
 };
 
@@ -22,6 +24,7 @@ const AppStack = () => (
   <NavigationContainer>
     <ApplicationNavigator.Navigator screenOptions={{ headerShown: false }}>
       <ApplicationNavigator.Screen name='Home' component={HomeScreen} />
+      <ApplicationNavigator.Screen name='Card' component={VirtualCard} />
       <ApplicationNavigator.Screen name='Memories' component={MemoriesScreen} />
     </ApplicationNavigator.Navigator>
   </NavigationContainer>

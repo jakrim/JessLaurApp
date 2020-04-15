@@ -36,15 +36,13 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   button: {
-    backgroundColor: Colors.primaryColor,
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
   },
   buttonText: {
-    color: Colors.lightPink,
     fontFamily: 'balqis',
-    fontSize: 35,
+    fontSize: 30,
     textAlign: 'center',
   },
 });

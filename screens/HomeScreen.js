@@ -1,59 +1,79 @@
 import React, { useState, useEffect } from 'react';
 import {
   ImageBackground,
-  SafeAreaView,
   View,
   StyleSheet,
   Text,
-  Button,
-  Flatlist,
   ScrollView,
-  TouchableWithoutFeedback,
+  Image,
+  TouchableOpacity,
+  Dimensions,
 } from 'react-native';
+const { width } = Dimensions.get('window');
 
 // import BackgroundImage from '../components/Memory';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import StyledButton from '../components/StyledButton';
-import Memory from '../components/Memory';
 
 const HomeScreen = (props) => {
   return (
     <>
-      {/* <BackgroundImage style={styles.image} /> */}
       <ImageBackground
         style={styles.image}
         source={require('../assets/BackgroundImage.jpg')}
       >
         <ScrollView>
           <Card style={styles.header}>
-            <Text>I need to make a card component and put text in a card</Text>
-            <Text style={styles.headerText}>Hi Laur,</Text>
             <Text style={styles.headerText}>
-              I hope you can forgive all the hours I spent coding, I wanted to
-              make you something as special and incredible as you. {'\n'}
-              <Text
-                style={{
-                  color: Colors.pink,
-                  textAlign: 'center',
-                  fontSize: 45,
-                }}
-              >
-                Happy 23rd Birthday!!
-              </Text>
+              Happy Birthday Lauren!!{'\n'}🇺🇸🇨🇦
             </Text>
           </Card>
+          <TouchableOpacity
+            style={styles.birthdayContainer}
+            onPress={() => {
+              props.navigation.navigate('Card');
+            }}
+            activeOpacity={0.8}
+          >
+            <Image
+              style={styles.birthdayCard}
+              source={require('../assets/birthdayCard.png')}
+            />
+          </TouchableOpacity>
+
+          {/* <StyledButton
+            style={styles.card}
+            onPress={() => {
+            }}
+          >
+            ❤️💖Open the Card!💖❤️
+          </StyledButton> */}
           <View style={styles.memory}>
             <StyledButton
-              style={styles.button}
+              style={styles.memories}
               onPress={() => {
                 props.navigation.navigate('Memories');
               }}
             >
-              ❤️💓💖Memories❤️💓💖
+              ❤️💖💓Memories💓💖❤️
             </StyledButton>
-            {/* <Memory style={styles.memory} /> */}
           </View>
+          <Card style={styles.hebrew}>
+            <Text
+              style={{
+                color: '#0038B8',
+                textAlign: 'center',
+                fontSize: 40,
+              }}
+            >
+              יום הולדת שמח לורן 🇮🇱 {'\n'}
+              בשנה הבאה בתל אביב
+            </Text>
+          </Card>
+          <Card style={styles.sig}>
+            <Text style={styles.headerText}>אני אוהב אותך{'\n'}Jesse</Text>
+          </Card>
         </ScrollView>
       </ImageBackground>
     </>
@@ -65,37 +85,59 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
     flex: 1,
     resizeMode: 'cover',
-    // opacity: 0.9,
-    // justifyContent: 'flex-start',
-    // alignItems: 'flex-start',
   },
   header: {
     margin: 5,
-    marginTop: 50,
+    marginVertical: 25,
+    backgroundColor: Colors.lightWhite,
+    opacity: 0.85,
+  },
+  hebrew: {
+    margin: 5,
+    // marginVertical: 50,
     backgroundColor: Colors.lightWhite,
     opacity: 0.85,
   },
   headerText: {
     opacity: 1.0,
+    textAlign: 'center',
     fontFamily: 'porcelain',
-    fontSize: 35,
+    fontSize: 45,
     padding: 5,
-    color: Colors.magenta,
+    color: Colors.pink,
   },
-  button: {
-    backgroundColor: Colors.magenta,
-    // shadowOpacity: 0.2,
-    // width: '100%',
+  card: {
+    backgroundColor: Colors.purple,
+    color: Colors.lightWhite,
+    opacity: 0.95,
+    fontSize: 28,
     paddingVertical: 10,
+    marginHorizontal: 5,
+  },
+  memories: {
+    backgroundColor: Colors.magenta,
+    color: Colors.lightPurp,
+    opacity: 0.95,
+    fontSize: 35,
+    fontFamily: 'Reckless',
+    paddingVertical: 5,
+    marginHorizontal: 5,
   },
   memory: {
-    // backgroundColor: Colors.lightPink,
-    // flex: 1,
-    // height: 200,
-    paddingVertical: 100,
-
-    // alignItems: 'center',
+    paddingVertical: 30,
     justifyContent: 'center',
+  },
+  sig: {
+    backgroundColor: Colors.lightWhite,
+    opacity: 0.9,
+    margin: 30,
+  },
+  birthdayCard: {
+    width: width / 1.6,
+    height: width / 1.3,
+  },
+  birthdayContainer: {
+    alignItems: 'center',
   },
 });
 
