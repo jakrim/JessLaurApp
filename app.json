@@ -1,27 +1,23 @@
 {
   "expo": {
-    "name": "relationshipApp",
-    "slug": "relationshipApp",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
-    "version": "1.0.0",
+    "name": "laurandjess",
+    "slug": "laurandjess",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Icon-App-60x60@3x.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Icon-App-60x60@3x.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffb8c6"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
+      "bundleIdentifier": "com.jessekrim.laurandjess",
+      "buildNumber": "1.0.1",
       "supportsTablet": true
     }
   }
