@@ -3,7 +3,7 @@
     "name": "laurandjess",
     "slug": "laurandjess",
     "platforms": ["ios", "android", "web"],
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/Icon-App-60x60@3x.png",
     "splash": {
@@ -17,7 +17,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "com.jessekrim.laurandjess",
-      "buildNumber": "1.0.1",
+      "buildNumber": "1.0.3",
       "supportsTablet": true
     }
   }

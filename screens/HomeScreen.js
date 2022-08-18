@@ -7,7 +7,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-  Dimensions,
+  Dimensions
 } from 'react-native';
 const { width } = Dimensions.get('window');
 
@@ -41,14 +41,6 @@ const HomeScreen = (props) => {
               source={require('../assets/birthdayCard.png')}
             />
           </TouchableOpacity>
-
-          {/* <StyledButton
-            style={styles.card}
-            onPress={() => {
-            }}
-          >
-            ❤️💖Open the Card!💖❤️
-          </StyledButton> */}
           <View style={styles.memory}>
             <StyledButton
               style={styles.memories}
@@ -64,7 +56,7 @@ const HomeScreen = (props) => {
               style={{
                 color: '#0038B8',
                 textAlign: 'center',
-                fontSize: 40,
+                fontSize: 40
               }}
             >
               יום הולדת שמח לורן 🇮🇱 {'\n'}
@@ -84,19 +76,19 @@ const styles = StyleSheet.create({
   image: {
     paddingVertical: 30,
     flex: 1,
-    resizeMode: 'cover',
+    resizeMode: 'cover'
   },
   header: {
     margin: 5,
     marginVertical: 25,
     backgroundColor: Colors.lightWhite,
-    opacity: 0.85,
+    opacity: 0.85
   },
   hebrew: {
     margin: 5,
     // marginVertical: 50,
     backgroundColor: Colors.lightWhite,
-    opacity: 0.85,
+    opacity: 0.85
   },
   headerText: {
     opacity: 1.0,
@@ -104,7 +96,7 @@ const styles = StyleSheet.create({
     fontFamily: 'porcelain',
     fontSize: 45,
     padding: 5,
-    color: Colors.pink,
+    color: Colors.pink
   },
   card: {
     backgroundColor: Colors.purple,
@@ -112,7 +104,7 @@ const styles = StyleSheet.create({
     opacity: 0.95,
     fontSize: 28,
     paddingVertical: 10,
-    marginHorizontal: 5,
+    marginHorizontal: 5
   },
   memories: {
     backgroundColor: Colors.magenta,
@@ -121,24 +113,24 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontFamily: 'Reckless',
     paddingVertical: 5,
-    marginHorizontal: 5,
+    marginHorizontal: 5
   },
   memory: {
     paddingVertical: 30,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   sig: {
     backgroundColor: Colors.lightWhite,
     opacity: 0.9,
-    margin: 30,
+    margin: 30
   },
   birthdayCard: {
     width: width / 1.6,
-    height: width / 1.3,
+    height: width / 1.3
   },
   birthdayContainer: {
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });
 
 export default HomeScreen;

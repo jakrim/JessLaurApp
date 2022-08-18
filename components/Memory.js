@@ -9,11 +9,6 @@ import { generateRandomMemory } from './HelperFunctions';
 const Memory = (props) => {
   return (
     <Card style={styles.card}>
-      {/* <FlatList
-        style={styles.card}
-        keyExtractor={(memory) => memory.id}
-        data={MEMORIES}
-        renderItem={(itemData) => ( */}
       <MemoryItem
         id={props.id}
         title={props.title}
@@ -21,26 +16,18 @@ const Memory = (props) => {
         description={props.description}
         image={props.image}
       />
-      )}
-      {/* /> */}
     </Card>
   );
-  // <View>
-  //   <Image
-  //     style={styles.image}
-  //     // source={require('../assets/Memory.jpg')}
-  //   />
-  // </View>;
 };
 
 const styles = StyleSheet.create({
   card: {
     flex: 1,
-    width: '100%',
+    width: '100%'
     // justifyContent: 'center',
     // height: '100%',
     // opacity: 0.8,
-  },
+  }
 });
 
 export default Memory;
